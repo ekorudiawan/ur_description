@@ -10,6 +10,9 @@
   <!-- ur3 -->
   <xacro:include filename="$(find ur_description)/urdf/ur3.urdf.xacro" />
 
+  <!-- gripper RG2 -->
+  <xacro:include filename="$(find ur_description)/urdf/rg2.urdf.xacro" />
+
   <!-- arm -->
   <xacro:arg name="kinematics_config" default="$(find ur_description)/config/ur3_default.yaml"/>
   <xacro:ur3_robot prefix="" joint_limited="true"
@@ -29,6 +32,8 @@
     <parent link="world" />
     <child link = "base_link" />
     <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
-  </joint>
+</joint>
+
+<xacro:rg2 parent="ee_link" />
 
 </robot>
