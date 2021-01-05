@@ -3,7 +3,7 @@
 	<!-- ros_control plugin -->
 	<!-- Hand -->
 	<gazebo reference="hand_link">
-		<mu1>0.2</mu1>
+        <mu1>0.2</mu1>
 		<mu2>0.2</mu2>
 		<material>Gazebo/DarkGrey</material>
 		<selfCollide>false</selfCollide>
@@ -24,9 +24,12 @@
 		<selfCollide>false</selfCollide>
 	</gazebo>
 
-	<gazebo reference="l_finger_link">
-		<mu1>0.2</mu1>
-		<mu2>0.2</mu2>
+    <gazebo reference="l_finger_link">
+        <minDepth>0.003</minDepth>
+        <maxVel>0.0</maxVel>
+        <mu1>100</mu1>
+        <mu2>100</mu2>
+        <kp>100000</kp>
 		<material>Gazebo/FlatBlack</material>
 		<selfCollide>false</selfCollide>
 	</gazebo>
@@ -46,9 +49,12 @@
 		<selfCollide>false</selfCollide>
 	</gazebo>
 
-	<gazebo reference="r_finger_link">
-		<mu1>0.2</mu1>
-		<mu2>0.2</mu2>
+    <gazebo reference="r_finger_link">
+        <minDepth>0.003</minDepth>
+        <maxVel>0.00</maxVel> 
+        <mu1>100</mu1>
+        <mu2>100</mu2> 
+        <kp>100000</kp>
 		<material>Gazebo/FlatBlack</material>
 		<selfCollide>false</selfCollide>
 	</gazebo>

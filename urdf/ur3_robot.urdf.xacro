@@ -28,5 +28,15 @@
     </joint>
     <!-- UR to Gripper -->
     <xacro:rg2 parent="tool0" />
-
+    
+    <gazebo>
+        <plugin name="gazebo+grasp_fix" filename="libgazebo_grasp_fix.so">
+            <arm>
+                <arm_name>ur3_arm</arm_name>
+                <palm_link>hand_link</palm_link>
+                <gripper_link>l_finger_link</gripper_link>
+                <gripper_link>r_finger_link</gripper_link>
+            </arm>
+        </plugin>
+    </gazebo>
 </robot>

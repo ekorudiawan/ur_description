@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <launch>
-    <arg name="limited" default="false" doc="If true, limits joint range [-PI, PI] on all joints." />
+    <arg name="limited" default="true" doc="If true, limits joint range [-PI, PI] on all joints." />
     <arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface" />
     <arg name="kinematics_config" default="$(find ur_description)/config/ur3_default.yaml"/>
 
